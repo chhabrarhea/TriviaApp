@@ -6,16 +6,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/holo_purple"
-    tools:context=".MainActivity">
+    tools:context=".Activity.MainActivity">
 
     <Button
         android:id="@+id/true_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
-        android:onClick="truePressed"
         android:layout_marginTop="40dp"
         android:background="@color/colorAccent"
+        android:onClick="truePressed"
         android:text="@string/true_title"
         app:layout_constraintStart_toEndOf="@+id/prev_button"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
@@ -28,12 +28,46 @@
         android:layout_marginEnd="8dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="40dp"
-        android:onClick="falsePressed"
         android:background="@color/colorAccent"
+        android:onClick="falsePressed"
         android:text="@string/false_title"
         app:layout_constraintEnd_toStartOf="@+id/next_button"
         app:layout_constraintStart_toEndOf="@+id/true_button"
         app:layout_constraintTop_toBottomOf="@+id/cardView" />
+
+
+    <Button
+        android:id="@+id/compile"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorAccent"
+        android:onClick="save"
+        android:visibility="gone"
+        android:text="Save Score"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.159" />
+    <Button
+        android:id="@+id/reset"
+        android:layout_width="match_parent"
+        android:layout_marginHorizontal="50dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:background="@color/colorAccent"
+        android:onClick="save"
+        android:visibility="gone"
+        android:text="Reset Game"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView"
+        app:layout_constraintVertical_bias="0.159" />
 
     <ImageButton
         android:id="@+id/prev_button"
@@ -41,9 +75,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
-        android:onClick="prevPressed"
         android:background="@color/colorAccent"
         android:contentDescription="@string/previous_button"
+        android:onClick="prevPressed"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:srcCompat="@android:drawable/ic_media_previous" />
@@ -53,10 +87,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:onClick="nextPressed"
         android:layout_marginTop="8dp"
         android:background="@color/colorAccent"
         android:contentDescription="@string/next_button"
+        android:onClick="nextPressed"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/cardView"
         app:srcCompat="@android:drawable/ic_media_next" />
@@ -94,12 +128,12 @@
         android:id="@+id/cardView"
         android:layout_width="match_parent"
         android:layout_height="200dp"
+        android:layout_marginBottom="40dp"
         android:layout_marginEnd="8dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginRight="10dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="130dp"
-        android:layout_marginBottom="40dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginHorizontal="20dp"
         app:cardCornerRadius="5dp"
         app:cardElevation="7dp"
 
@@ -120,5 +154,6 @@
             android:textSize="28sp" />
 
     </androidx.cardview.widget.CardView>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
